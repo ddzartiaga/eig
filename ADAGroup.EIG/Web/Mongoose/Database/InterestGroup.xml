@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectStudioExport Version="060000">
+   <IDODefinitions>
+      <IDODefinition Name="InterestGroups">
+         <ServerName>InforEIG</ServerName>
+         <AccessAs>EIG</AccessAs>
+         <LabelStringID>oInterestGroups</LabelStringID>
+         <RevisionNo>2</RevisionNo>
+         <RevisionDate>2020-10-31T17:36:00</RevisionDate>
+         <ReplaceFlag>0</ReplaceFlag>
+         <QuoteTableAliases>0</QuoteTableAliases>
+         <Tables>
+            <Table Name="InterestGroups" Alias="InterestGroups" Type="PRIMARY" />
+         </Tables>
+         <Methods />
+         <Properties>
+            <Property Name="Banner" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Banner</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>varbinary</ColumnDataType>
+                  <DataLength>-1</DataLength>
+                  <DataType>Binary</DataType>
+                  <LabelStringID>sBanner</LabelStringID>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CreateDate" Key="0" Binding="BOUND" Sequence="12">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreateDate</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CreatedBy" Key="0" Binding="BOUND" Sequence="10">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreatedBy</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>128</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Description" Key="0" Binding="BOUND" Sequence="7">
+               <PropertyClass>Description</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Description</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <DataLength>200</DataLength>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="GoalAndPurpose" Key="0" Binding="BOUND" Sequence="5">
+               <PropertyClass>Note</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>GoalAndPurpose</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <DataLength>-1</DataLength>
+                  <IsRequired>1</IsRequired>
+                  <LabelStringID>sGoalAndPurpose</LabelStringID>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="GroupId" Key="1" Binding="BOUND" Sequence="1">
+               <PropertyClass>int</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>GroupId</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <DefaultValue>AUTONUMBER()</DefaultValue>
+                  <IsRequired>1</IsRequired>
+                  <LabelStringID>sGroupId</LabelStringID>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="InWorkflow" Key="0" Binding="BOUND" Sequence="16">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>InWorkflow</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>FlagNyType</ColumnDataType>
+                  <DataType>Byte</DataType>
+                  <IsRORecordFlag>1</IsRORecordFlag>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Logo" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Logo</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>varbinary</ColumnDataType>
+                  <DataLength>-1</DataLength>
+                  <DataType>Binary</DataType>
+                  <LabelStringID>sLogo</LabelStringID>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="MIssion" Key="0" Binding="BOUND" Sequence="6">
+               <PropertyClass>Description</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>MIssion</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <DataLength>200</DataLength>
+                  <IsRequired>1</IsRequired>
+                  <LabelStringID>sMIssion</LabelStringID>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Name" Key="0" Binding="BOUND" Sequence="2">
+               <PropertyClass>Name</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Name</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <DataLength>100</DataLength>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="NoteExistsFlag" Key="0" Binding="BOUND" Sequence="15">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>NoteExistsFlag</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>FlagNyType</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RecordDate" Key="0" Binding="BOUND" Sequence="13">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RecordDate</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RowPointer" Key="0" Binding="BOUND" Sequence="14">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RowPointer</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>RowPointerType</ColumnDataType>
+                  <DataType>GUID</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Status" Key="0" Binding="BOUND" Sequence="8">
+               <PropertyClass>int</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Status</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <LabelStringID>sStatus</LabelStringID>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="StatusDate" Key="0" Binding="BOUND" Sequence="9">
+               <PropertyClass>DateTime</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>StatusDate</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes />
+            </Property>
+            <Property Name="UpdatedBy" Key="0" Binding="BOUND" Sequence="11">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>UpdatedBy</BoundToColumn>
+               <ColumnTableAlias>InterestGroups</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>128</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+         </Properties>
+         <Rules />
+      </IDODefinition>
+   </IDODefinitions>
+</ObjectStudioExport>

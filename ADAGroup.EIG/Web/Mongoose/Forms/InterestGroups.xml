@@ -1,0 +1,930 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormsAndObjectsExport Version="010000">
+   <Forms Type="1">
+      <Form Name="InterestGroups" Scope="1" ScopeName="[NULL]">
+         <Caption>sInterestGroups</Caption>
+         <Type>0</Type>
+         <StandardOperations>1019</StandardOperations>
+         <Flags>1048778</Flags>
+         <Height>45</Height>
+         <LeftPos>0</LeftPos>
+         <TopPos>0</TopPos>
+         <Width>146.5</Width>
+         <HelpContextID>-1</HelpContextID>
+         <PaneZeroSize>27.625</PaneZeroSize>
+         <PrimaryDataSource>InterestGroups(OBJNAME(oInterestGroups))</PrimaryDataSource>
+         <MasterDeviceID>0</MasterDeviceID>
+         <LockedBy>eigdev</LockedBy>
+         <Components>
+            <Component Name="Banner_Button">
+               <DeviceID>-1</DeviceID>
+               <Type>8</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>2.05882352941176</TopPos>
+               <LeftPos>2</LeftPos>
+               <Height>16.5882352941176</Height>
+               <ListHeight>0</ListHeight>
+               <Width>114.625</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format />
+            </Component>
+            <Component Name="Banner_Group">
+               <DeviceID>-1</DeviceID>
+               <Type>6</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>0.823529411764706</TopPos>
+               <LeftPos>1</LeftPos>
+               <Height>18.3529411764706</Height>
+               <ListHeight>0</ListHeight>
+               <Width>116.75</Width>
+               <Caption>Banner</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format />
+               <EffectiveCaption>Banner</EffectiveCaption>
+            </Component>
+            <Component Name="BannerGridCol">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>4</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>17.5</Height>
+               <ListHeight>0</ListHeight>
+               <Width>10</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>3</ContainerSequence>
+               <DataSource>object.Banner</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <MenuName>StdDefault</MenuName>
+               <Post301Format />
+               <EffectiveCaption>sBanner</EffectiveCaption>
+            </Component>
+            <Component Name="button1_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>8</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>25.2941176470588</TopPos>
+               <LeftPos>94.5</LeftPos>
+               <Height>1.35294117647059</Height>
+               <ListHeight>0</ListHeight>
+               <Width>16.625</Width>
+               <Caption>FAQs</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format />
+               <EffectiveCaption>FAQs</EffectiveCaption>
+            </Component>
+            <Component Name="button2_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>8</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>27.5882352941176</TopPos>
+               <LeftPos>94.5</LeftPos>
+               <Height>1.35294117647059</Height>
+               <ListHeight>0</ListHeight>
+               <Width>16.625</Width>
+               <Caption>Members</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format />
+               <EffectiveCaption>Members</EffectiveCaption>
+            </Component>
+            <Component Name="button3_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>8</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>30.0588235294118</TopPos>
+               <LeftPos>94.5</LeftPos>
+               <Height>1.35294117647059</Height>
+               <ListHeight>0</ListHeight>
+               <Width>16.625</Width>
+               <Caption>Galleries</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format />
+               <EffectiveCaption>Galleries</EffectiveCaption>
+            </Component>
+            <Component Name="DescriptionEdit_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>1</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>23.0588235294118</TopPos>
+               <LeftPos>11.25</LeftPos>
+               <Height>1.29411764705882</Height>
+               <ListHeight>0</ListHeight>
+               <Width>43.625</Width>
+               <Caption>C(DescriptionStatic_SITE)</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <DataSource>object.Description</DataSource>
+               <Binding>1</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Description</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>C(DescriptionStatic_SITE)</EffectiveCaption>
+            </Component>
+            <Component Name="DescriptionGridCol">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>7</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>17.5</Height>
+               <ListHeight>0</ListHeight>
+               <Width>14</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>6</ContainerSequence>
+               <DataSource>object.Description</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Description</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sDescription</EffectiveCaption>
+            </Component>
+            <Component Name="DescriptionGridCol1_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>5.88235294117647</Height>
+               <ListHeight>0</ListHeight>
+               <Width>12.5</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>10</ContainerSequence>
+               <DataSource>object.Description</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Description</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sDescription</EffectiveCaption>
+            </Component>
+            <Component Name="DescriptionGridCol2_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>5.88235294117647</Height>
+               <ListHeight>0</ListHeight>
+               <Width>12.5</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>12</ContainerSequence>
+               <DataSource>object.Description</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Description</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sDescription</EffectiveCaption>
+            </Component>
+            <Component Name="DescriptionStatic_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>0</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>23.2941176470588</TopPos>
+               <LeftPos>2.125</LeftPos>
+               <Height>1</Height>
+               <ListHeight>0</ListHeight>
+               <Width>8.5</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format>JUSTIFY(L)</Post301Format>
+               <EffectiveCaption>sDescription</EffectiveCaption>
+            </Component>
+            <Component Name="FormCollectionGrid">
+               <DeviceID>-1</DeviceID>
+               <Type>14</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>16.4705882352941</Height>
+               <ListHeight>0</ListHeight>
+               <Width>32.375</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <DataSource>objects</DataSource>
+               <Binding>3</Binding>
+               <Flags>384</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format />
+            </Component>
+            <Component Name="GoalAndPurposeEdit_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>18</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>26.3970588235294</TopPos>
+               <LeftPos>2.125</LeftPos>
+               <Height>6</Height>
+               <ListHeight>0</ListHeight>
+               <Width>40</Width>
+               <Caption>C(GoalAndPurposeStatic_SITE)</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <DataSource>object.GoalAndPurpose</DataSource>
+               <Binding>1</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Note</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>C(GoalAndPurposeStatic_SITE)</EffectiveCaption>
+            </Component>
+            <Component Name="GoalAndPurposeGridCol">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>5</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>17.5</Height>
+               <ListHeight>0</ListHeight>
+               <Width>19</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>4</ContainerSequence>
+               <DataSource>object.GoalAndPurpose</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Note</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sGoalAndPurpose</EffectiveCaption>
+            </Component>
+            <Component Name="GoalAndPurposeGridCol1_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>5.88235294117647</Height>
+               <ListHeight>0</ListHeight>
+               <Width>12.5</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>13</ContainerSequence>
+               <DataSource>object.GoalAndPurpose</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Note</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sGoalAndPurpose</EffectiveCaption>
+            </Component>
+            <Component Name="GoalAndPurposeGridCol2_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>5.88235294117647</Height>
+               <ListHeight>0</ListHeight>
+               <Width>12.5</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>14</ContainerSequence>
+               <DataSource>object.GoalAndPurpose</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Note</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sGoalAndPurpose</EffectiveCaption>
+            </Component>
+            <Component Name="GoalAndPurposeStatic_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>0</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>25</TopPos>
+               <LeftPos>2.125</LeftPos>
+               <Height>0.882352941176471</Height>
+               <ListHeight>0</ListHeight>
+               <Width>14.625</Width>
+               <Caption>sGoalAndPurpose</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format>JUSTIFY(L)</Post301Format>
+               <EffectiveCaption>sGoalAndPurpose</EffectiveCaption>
+            </Component>
+            <Component Name="groupBox1_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>6</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>33.5294117647059</TopPos>
+               <LeftPos>1</LeftPos>
+               <Height>11.2352941176471</Height>
+               <ListHeight>0</ListHeight>
+               <Width>116</Width>
+               <Caption>sOfficers</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format />
+               <EffectiveCaption>sOfficers</EffectiveCaption>
+            </Component>
+            <Component Name="groupBox2_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>6</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>19.7058823529412</TopPos>
+               <LeftPos>1</LeftPos>
+               <Height>13.2941176470588</Height>
+               <ListHeight>0</ListHeight>
+               <Width>86.625</Width>
+               <Caption>sGroupDetails</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format />
+               <EffectiveCaption>sGroupDetails</EffectiveCaption>
+            </Component>
+            <Component Name="GroupIdGridCol">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>1</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>17.5</Height>
+               <ListHeight>0</ListHeight>
+               <Width>11</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>0</ContainerSequence>
+               <DataSource>object.GroupId</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>int</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sGroupId</EffectiveCaption>
+            </Component>
+            <Component Name="Logo_Button">
+               <DeviceID>-1</DeviceID>
+               <Type>8</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>14.0588235294118</TopPos>
+               <LeftPos>90</LeftPos>
+               <Height>9.64705882352941</Height>
+               <ListHeight>0</ListHeight>
+               <Width>22.875</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <EventToGenerate>UpdateLogo</EventToGenerate>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format />
+            </Component>
+            <Component Name="Logo_Group">
+               <DeviceID>-1</DeviceID>
+               <Type>6</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>13.1764705882353</TopPos>
+               <LeftPos>88.875</LeftPos>
+               <Height>11</Height>
+               <ListHeight>0</ListHeight>
+               <Width>25</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format />
+            </Component>
+            <Component Name="LogoGridCol">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>3</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>17.5</Height>
+               <ListHeight>0</ListHeight>
+               <Width>10</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>2</ContainerSequence>
+               <DataSource>object.Logo</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <MenuName>StdDefault</MenuName>
+               <Post301Format />
+               <EffectiveCaption>sLogo</EffectiveCaption>
+            </Component>
+            <Component Name="MIssionEdit_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>18</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>26.3970588235294</TopPos>
+               <LeftPos>46</LeftPos>
+               <Height>6</Height>
+               <ListHeight>0</ListHeight>
+               <Width>40</Width>
+               <Caption>C(MIssionStatic_SITE)</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <DataSource>object.MIssion</DataSource>
+               <Binding>1</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Description</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>C(MIssionStatic_SITE)</EffectiveCaption>
+            </Component>
+            <Component Name="MIssionGridCol">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>6</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>17.5</Height>
+               <ListHeight>0</ListHeight>
+               <Width>10</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>5</ContainerSequence>
+               <DataSource>object.MIssion</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Description</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sMIssion</EffectiveCaption>
+            </Component>
+            <Component Name="MIssionGridCol1_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>5.88235294117647</Height>
+               <ListHeight>0</ListHeight>
+               <Width>12.5</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>15</ContainerSequence>
+               <DataSource>object.MIssion</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Description</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sMIssion</EffectiveCaption>
+            </Component>
+            <Component Name="MIssionStatic_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>0</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>25</TopPos>
+               <LeftPos>46.125</LeftPos>
+               <Height>1</Height>
+               <ListHeight>0</ListHeight>
+               <Width>7.875</Width>
+               <Caption>sMission</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format>JUSTIFY(L)</Post301Format>
+               <EffectiveCaption>sMission</EffectiveCaption>
+            </Component>
+            <Component Name="NameEdit_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>1</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>21</TopPos>
+               <LeftPos>11.375</LeftPos>
+               <Height>1.29411764705882</Height>
+               <ListHeight>0</ListHeight>
+               <Width>43.625</Width>
+               <Caption>C(NameStatic_SITE)</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <DataSource>object.Name</DataSource>
+               <Binding>1</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Name</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>C(NameStatic_SITE)</EffectiveCaption>
+            </Component>
+            <Component Name="NameGridCol">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>2</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>17.5</Height>
+               <ListHeight>0</ListHeight>
+               <Width>10</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>1</ContainerSequence>
+               <DataSource>object.Name</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Name</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sName</EffectiveCaption>
+            </Component>
+            <Component Name="NameGridCol1_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>5.88235294117647</Height>
+               <ListHeight>0</ListHeight>
+               <Width>12.5</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>9</ContainerSequence>
+               <DataSource>object.Name</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Name</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sName</EffectiveCaption>
+            </Component>
+            <Component Name="NameGridCol2_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>5.88235294117647</Height>
+               <ListHeight>0</ListHeight>
+               <Width>12.5</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>11</ContainerSequence>
+               <DataSource>object.Name</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>Name</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sName</EffectiveCaption>
+            </Component>
+            <Component Name="NameStatic_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>0</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>21.1176470588235</TopPos>
+               <LeftPos>2.25</LeftPos>
+               <Height>1</Height>
+               <ListHeight>0</ListHeight>
+               <Width>8.5</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format>JUSTIFY(L)</Post301Format>
+               <EffectiveCaption>sName</EffectiveCaption>
+            </Component>
+            <Component Name="StatusDateEdit_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>1</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>23.0588235294118</TopPos>
+               <LeftPos>67.75</LeftPos>
+               <Height>1.29411764705882</Height>
+               <ListHeight>0</ListHeight>
+               <Width>18.375</Width>
+               <Caption>C(StatusDateStatic_SITE)</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <DataSource>object.StatusDate</DataSource>
+               <Binding>1</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>DateTime</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>C(StatusDateStatic_SITE)</EffectiveCaption>
+            </Component>
+            <Component Name="StatusDateGridCol">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>9</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>17.5</Height>
+               <ListHeight>0</ListHeight>
+               <Width>10</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>8</ContainerSequence>
+               <DataSource>object.StatusDate</DataSource>
+               <Binding>1</Binding>
+               <Flags>4194304</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>DateTime</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sDate</EffectiveCaption>
+            </Component>
+            <Component Name="StatusDateGridCol1_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>5.88235294117647</Height>
+               <ListHeight>0</ListHeight>
+               <Width>12.5</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>17</ContainerSequence>
+               <DataSource>object.StatusDate</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>DateTime</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sDate</EffectiveCaption>
+            </Component>
+            <Component Name="StatusDateStatic_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>0</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>23.2941176470588</TopPos>
+               <LeftPos>59.625</LeftPos>
+               <Height>1</Height>
+               <ListHeight>0</ListHeight>
+               <Width>6.75</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format>JUSTIFY(R)</Post301Format>
+               <EffectiveCaption>sDate</EffectiveCaption>
+            </Component>
+            <Component Name="StatusEdit_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>1</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>21</TopPos>
+               <LeftPos>67.75</LeftPos>
+               <Height>1.29411764705882</Height>
+               <ListHeight>0</ListHeight>
+               <Width>18.375</Width>
+               <Caption>C(StatusStatic_SITE)</Caption>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <DataSource>object.Status</DataSource>
+               <Binding>1</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>int</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>C(StatusStatic_SITE)</EffectiveCaption>
+            </Component>
+            <Component Name="StatusGridCol">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>8</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>17.5</Height>
+               <ListHeight>0</ListHeight>
+               <Width>10</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>7</ContainerSequence>
+               <DataSource>object.Status</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>int</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sStatus</EffectiveCaption>
+            </Component>
+            <Component Name="StatusGridCol1_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>15</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>0</TopPos>
+               <LeftPos>0</LeftPos>
+               <Height>5.88235294117647</Height>
+               <ListHeight>0</ListHeight>
+               <Width>12.5</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName>FormCollectionGrid</ContainerName>
+               <ContainerSequence>16</ContainerSequence>
+               <DataSource>object.Status</DataSource>
+               <Binding>1</Binding>
+               <Flags>0</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <PropertyClassName>int</PropertyClassName>
+               <Post301Format />
+               <EffectiveCaption>sStatus</EffectiveCaption>
+            </Component>
+            <Component Name="StatusStatic_SITE">
+               <DeviceID>-1</DeviceID>
+               <Type>0</Type>
+               <TabOrder>0</TabOrder>
+               <TopPos>21.4117647058824</TopPos>
+               <LeftPos>58.625</LeftPos>
+               <Height>1</Height>
+               <ListHeight>0</ListHeight>
+               <Width>7.625</Width>
+               <MaxCharacters>0</MaxCharacters>
+               <ContainerName />
+               <ContainerSequence>0</ContainerSequence>
+               <Binding>0</Binding>
+               <Flags>1</Flags>
+               <ReadOnly>False</ReadOnly>
+               <Hidden>False</Hidden>
+               <HelpContextID>0</HelpContextID>
+               <Post301Format>JUSTIFY(R)</Post301Format>
+               <EffectiveCaption>sStatus</EffectiveCaption>
+            </Component>
+         </Components>
+         <EventHandlers>
+            <EventHandler Name="UpdateLogo" Sequence="0">
+               <ResponseType>37</ResponseType>
+               <Response>ACTION(Import) COMPONENT(Logo_Button) ERRORMESSAGE(Unable to update logo.) SUCCESSMESSAGE(Logo updated.)</Response>
+            </EventHandler>
+         </EventHandlers>
+      </Form>
+   </Forms>
+   <Strings Type="7">
+      <String Name="sBanner" Scope="1" ScopeName="[NULL]">
+         <TableName>Strings</TableName>
+         <String>Banner</String>
+         <LockedBy>eigdev</LockedBy>
+      </String>
+      <String Name="sGoalAndPurpose" Scope="1" ScopeName="[NULL]">
+         <TableName>Strings</TableName>
+         <String>Goal And Purpose</String>
+         <LockedBy>eigdev</LockedBy>
+      </String>
+      <String Name="sGroupDetails" Scope="1" ScopeName="[NULL]">
+         <TableName>Strings</TableName>
+         <String>Group Details</String>
+         <LockedBy>eigdev</LockedBy>
+      </String>
+      <String Name="sInterestGroups" Scope="1" ScopeName="[NULL]">
+         <TableName>Strings</TableName>
+         <String>Interest Groups</String>
+         <LockedBy>eigdev</LockedBy>
+      </String>
+      <String Name="sLogo" Scope="1" ScopeName="[NULL]">
+         <TableName>Strings</TableName>
+         <String>Logo</String>
+         <LockedBy>eigdev</LockedBy>
+      </String>
+      <String Name="sMIssion" Scope="1" ScopeName="[NULL]">
+         <TableName>Strings</TableName>
+         <String>Mission</String>
+         <LockedBy>eigdev</LockedBy>
+      </String>
+      <String Name="sOfficers" Scope="1" ScopeName="[NULL]">
+         <TableName>Strings</TableName>
+         <String>Officers and Roles</String>
+         <LockedBy>eigdev</LockedBy>
+      </String>
+      <String Name="sStatusDate" Scope="1" ScopeName="[NULL]">
+         <TableName>Strings</TableName>
+         <String>Status Date</String>
+         <LockedBy>eigdev</LockedBy>
+      </String>
+   </Strings>
+</FormsAndObjectsExport>
