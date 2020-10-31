@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
+using Web.Models;
+using Web.Services;
+using Newtonsoft.Json;
 
 namespace Web
 {
@@ -23,7 +27,13 @@ namespace Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            // get the settings from appsettings.json
+            IConfigurationSection mgsettings = Configuration.GetSection("Mongoose");
+            services.Configure<MongooseSettings>(mgsettings);
+            services.AddScoped<IHttpService,MGHttpService>();
+
+            services.AddControllersWithViews().AddNewtonsoftJson();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +61,10 @@ namespace Web
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    name: "apis",
+                    pattern: "api/{controller}/{action}/{param?}");
             });
         }
     }
