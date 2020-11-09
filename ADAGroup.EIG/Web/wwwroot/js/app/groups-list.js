@@ -24,11 +24,8 @@ new Vue({
         axios.get('https://localhost:44378/api/Mongoose/LoadCollection/InterestGroups?properties=GroupId,Name,Description,Logo')
             .then(response => {
                     this.groups = response.data.items;
-                    console.log(this.groups);
                 }
             )
             .catch(error => console.log('<interest-groups>' + error))
-
-        //TODO: get featured events from server using axios
     },
 });
