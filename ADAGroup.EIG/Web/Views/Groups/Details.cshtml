@@ -1,384 +1,385 @@
 ﻿@{
-	ViewData["Title"] = "Group Detail";
+    ViewData["Title"] = "Group Detail";
 }
 
 <div>
-	<input type="hidden" id="gId" value="@ViewBag.GroupId" />
+    <input type="hidden" id="gId" value="@ViewBag.GroupId" />
 </div>
 <div id="page">
-	<section class="group-vector">
-		<img src="~/images/Group_of_smiling_office_workers_or_business_people.jpg" />
-	</section>
-	<!-- ***** Frequently Question Start ***** -->
-	<section class="section" id="frequently-question">
-		<div class="container">
-			<!-- ***** Section Title Start ***** -->
-			<div class="row justify-content-center">
-				<div class="col-lg-12">
-					<div class="text-center">
-						<div class="line"></div>
-						<h3 class="title"><span>Group Name </span> Details</h3>
-					</div>
-				</div>
-				<div class="col-lg-12">
-					<div class="section-heading text-center">
-						<p>Vivamus venenatis eu mi ac mattis. Maecenas ut elementum sapien. Nunc euismod risus ac lobortis congue. Sed erat quam.</p>
-					</div>
-				</div>
-			</div>
-			<!-- ***** Section Title End ***** -->
+    <section class="group-vector">
+        <img src="~/images/Group_of_smiling_office_workers_or_business_people.jpg" />
+    </section>
+    <!-- ***** Frequently Question Start ***** -->
+    <section class="section" id="frequently-question">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <div class="line"></div>
+                        <div class="blog-image">
+                            <img :src="logo" alt="" height="150" width="200" align-items="center">
+                        </div>
+                        <h3 class="title"><span> {{info.Name}} </span></h3>
+                        <div class="section-heading text-center">
+                            <p> {{info.Description}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
 
-			<div class="row">
-				<div class="left-text col-lg-6 col-md-6 col-sm-12">
-					<h5>Class aptent taciti sociosqu ad litora torquent per conubia</h5>
-					<div class="accordion-text">
-						<p>Curabitur placerat diam in risus lobortis, laoreet porttitor est elementum. Nulla ultricies risus quis risus scelerisque, a aliquam tellus maximus. Cras pretium nulla ac convallis iaculis. Aenean bibendum erat vitae odio sodales, in facilisis tellus volutpat.</p>
-						<p>Sed lobortis pellentesque magna ac congue. Suspendisse quis molestie magna, id eleifend ex. Ut mollis ultricies diam nec dictum. Morbi commodo hendrerit mi vel vulputate. Proin non tincidunt dui. Lorem ipsum dolor sit amet.</p>
-						<span>Email: <a href="#">email@company.com</a><br></span>
-						<a href="#contact-us" class="main-button">Contact Us</a>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<div class="accordions is-first-expanded">
-						<article class="accordion">
-							<div class="accordion-head">
-								<span>First Common Question</span>
-								<span class="icon">
-									<i class="icon fa fa-chevron-right"></i>
-								</span>
-							</div>
-							<div class="accordion-body">
-								<div class="content">
-									<p>
-										Duis vulputate porttitor urna sit amet pretium. Phasellus sed pulvinar eros, condimentum consequat ex. Suspendisse potenti.
-										<br><br>
-										Pellentesque maximus lorem sed elit imperdiet mattis. Duis posuere mauris ut eros rutrum sodales. Aliquam erat volutpat.
-									</p>
-								</div>
-							</div>
-						</article>
-						<article class="accordion">
-							<div class="accordion-head">
-								<span>Second Question Answer</span>
-								<span class="icon">
-									<i class="icon fa fa-chevron-right"></i>
-								</span>
-							</div>
-							<div class="accordion-body">
-								<div class="content">
-									<p>
-										Sed odio elit, cursus sed consequat at, rutrum eget augue. Cras ac eros iaculis, tempor quam sit amet, scelerisque mi. Quisque eu risus eget nunc porttitor vestibulum at a ante.
-										<br><br>
-										Praesent ut placerat turpis, vel pellentesque dolor. Sed rutrum eleifend tortor, eu luctus orci sagittis in. In blandit fringilla mollis.
-									</p>
-								</div>
-							</div>
-						</article>
-						<article class="accordion">
-							<div class="accordion-head">
-								<span>Third Answer for you</span>
-								<span class="icon">
-									<i class="icon fa fa-chevron-right"></i>
-								</span>
-							</div>
-							<div class="accordion-body">
-								<div class="content">
-									<p>
-										Proin feugiat ante ut vulputate rutrum. Nam quis erat turpis. Nullam maximus pharetra lorem, eu condimentum est iaculis ut. Pellentesque mattis ultrices dignissim.
-										<br><br>
-										Etiam et enim finibus, feugiat massa efficitur, finibus sapien. Sed cursus lacus quis arcu scelerisque, eget ornare risus maximus. Aenean non lectus id odio rhoncus pharetra.
-									</p>
-								</div>
-							</div>
-						</article>
-						<article class="accordion">
-							<div class="accordion-head">
-								<span>Fourth Question Asked</span>
-								<span class="icon">
-									<i class="icon fa fa-chevron-right"></i>
-								</span>
-							</div>
-							<div class="accordion-body">
-								<div class="content">
-									<p>
-										Phasellus eu purus ornare, eleifend orci nec, egestas nulla. Sed sed aliquet sapien. Proin placerat, ipsum eu posuere blandit, tellus quam consectetur nisi, id sollicitudin diam ex at nisi.
-										<br><br>
-										Aenean fermentum eget turpis egestas semper. Sed finibus mollis venenatis. Praesent at sem in massa iaculis pharetra.
-									</p>
-								</div>
-							</div>
-						</article>
-						<article class="accordion">
-							<div class="accordion-head">
-								<span>Fifth Ever Question</span>
-								<span class="icon">
-									<i class="icon fa fa-chevron-right"></i>
-								</span>
-							</div>
-							<div class="accordion-body">
-								<div class="content">
-									<p>
-										Quisque aliquet ipsum ut magna rhoncus, euismod lacinia elit rhoncus. Sed sapien elit, mollis ut ultricies quis, fermentum nec ante.
-										<br><br>
-										Sed nec ex nec tortor fermentum sollicitudin id ut ligula. Ut sagittis rutrum lectus, non sagittis ante euismod eu.
-									</p>
-								</div>
-							</div>
-						</article>
-						<article class="accordion">
-							<div class="accordion-head">
-								<span>Sixth Sense Question</span>
-								<span class="icon">
-									<i class="icon fa fa-chevron-right"></i>
-								</span>
-							</div>
-							<div class="accordion-body">
-								<div class="content">
-									<p>Suspendisse potenti. Ut dapibus leo ut massa vulputate semper. Pellentesque maximus lorem sed elit imperdiet mattis. Duis posuere mauris ut eros rutrum sodales. Aliquam erat volutpat.</p>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="team" class="team-area pt-50">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-5">
-					<div class="section-title text-center pb-30">
-						<div class="line m-auto"></div>
-						<h3 class="title"><span>Meet Our</span> Core Officers</h3>
-					</div>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-lg-4 col-md-7 col-sm-8">
-					<div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-						<div class="team-image">
-							<img src="~/images/team-1.png" alt="Team">
-							<div class="social">
-								<ul>
-									<li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
-									<li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
-									<li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
-									<li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h5 class="holder-name"><a href="#">Isabela Moreira</a></h5>
-							<p class="text">Founder and CEO</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-7 col-sm-8">
-					<div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-						<div class="team-image">
-							<img src="~/images/team-2.png" alt="Team">
-							<div class="social">
-								<ul>
-									<li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
-									<li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
-									<li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
-									<li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h5 class="holder-name"><a href="#">Elon Musk</a></h5>
-							<p class="text">Sr. Software Engineer</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-7 col-sm-8">
-					<div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-						<div class="team-image">
-							<img src="~/images/team-3.png" alt="Team">
-							<div class="social">
-								<ul>
-									<li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
-									<li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
-									<li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
-									<li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h5 class="holder-name"><a href="#">Fiona Smith</a></h5>
-							<p class="text">Business Development Manager</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+            <div class="row">
+                <div class="left-text col-lg-6 col-md-6 col-sm-12">
+                    <h5>Class aptent taciti sociosqu ad litora torquent per conubia</h5>
+                    <div class="accordion-text">
+                        <p>Curabitur placerat diam in risus lobortis, laoreet porttitor est elementum. Nulla ultricies risus quis risus scelerisque, a aliquam tellus maximus. Cras pretium nulla ac convallis iaculis. Aenean bibendum erat vitae odio sodales, in facilisis tellus volutpat.</p>
+                        <p>Sed lobortis pellentesque magna ac congue. Suspendisse quis molestie magna, id eleifend ex. Ut mollis ultricies diam nec dictum. Morbi commodo hendrerit mi vel vulputate. Proin non tincidunt dui. Lorem ipsum dolor sit amet.</p>
+                        <span>Email: <a href="#">email@company.com</a><br></span>
+                        <a href="#contact-us" class="main-button">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="accordions is-first-expanded">
+                        <article class="accordion">
+                            <div class="accordion-head">
+                                <span>First Common Question</span>
+                                <span class="icon">
+                                    <i class="icon fa fa-chevron-right"></i>
+                                </span>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="content">
+                                    <p>
+                                        Duis vulputate porttitor urna sit amet pretium. Phasellus sed pulvinar eros, condimentum consequat ex. Suspendisse potenti.
+                                        <br><br>
+                                        Pellentesque maximus lorem sed elit imperdiet mattis. Duis posuere mauris ut eros rutrum sodales. Aliquam erat volutpat.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion">
+                            <div class="accordion-head">
+                                <span>Second Question Answer</span>
+                                <span class="icon">
+                                    <i class="icon fa fa-chevron-right"></i>
+                                </span>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="content">
+                                    <p>
+                                        Sed odio elit, cursus sed consequat at, rutrum eget augue. Cras ac eros iaculis, tempor quam sit amet, scelerisque mi. Quisque eu risus eget nunc porttitor vestibulum at a ante.
+                                        <br><br>
+                                        Praesent ut placerat turpis, vel pellentesque dolor. Sed rutrum eleifend tortor, eu luctus orci sagittis in. In blandit fringilla mollis.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion">
+                            <div class="accordion-head">
+                                <span>Third Answer for you</span>
+                                <span class="icon">
+                                    <i class="icon fa fa-chevron-right"></i>
+                                </span>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="content">
+                                    <p>
+                                        Proin feugiat ante ut vulputate rutrum. Nam quis erat turpis. Nullam maximus pharetra lorem, eu condimentum est iaculis ut. Pellentesque mattis ultrices dignissim.
+                                        <br><br>
+                                        Etiam et enim finibus, feugiat massa efficitur, finibus sapien. Sed cursus lacus quis arcu scelerisque, eget ornare risus maximus. Aenean non lectus id odio rhoncus pharetra.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion">
+                            <div class="accordion-head">
+                                <span>Fourth Question Asked</span>
+                                <span class="icon">
+                                    <i class="icon fa fa-chevron-right"></i>
+                                </span>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="content">
+                                    <p>
+                                        Phasellus eu purus ornare, eleifend orci nec, egestas nulla. Sed sed aliquet sapien. Proin placerat, ipsum eu posuere blandit, tellus quam consectetur nisi, id sollicitudin diam ex at nisi.
+                                        <br><br>
+                                        Aenean fermentum eget turpis egestas semper. Sed finibus mollis venenatis. Praesent at sem in massa iaculis pharetra.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion">
+                            <div class="accordion-head">
+                                <span>Fifth Ever Question</span>
+                                <span class="icon">
+                                    <i class="icon fa fa-chevron-right"></i>
+                                </span>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="content">
+                                    <p>
+                                        Quisque aliquet ipsum ut magna rhoncus, euismod lacinia elit rhoncus. Sed sapien elit, mollis ut ultricies quis, fermentum nec ante.
+                                        <br><br>
+                                        Sed nec ex nec tortor fermentum sollicitudin id ut ligula. Ut sagittis rutrum lectus, non sagittis ante euismod eu.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion">
+                            <div class="accordion-head">
+                                <span>Sixth Sense Question</span>
+                                <span class="icon">
+                                    <i class="icon fa fa-chevron-right"></i>
+                                </span>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="content">
+                                    <p>Suspendisse potenti. Ut dapibus leo ut massa vulputate semper. Pellentesque maximus lorem sed elit imperdiet mattis. Duis posuere mauris ut eros rutrum sodales. Aliquam erat volutpat.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="team" class="team-area pt-50">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div class="section-title text-center pb-30">
+                        <div class="line m-auto"></div>
+                        <h3 class="title"><span>Meet Our</span> Core Officers</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-7 col-sm-8">
+                    <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <div class="team-image">
+                            <img src="~/images/team-1.png" alt="Team">
+                            <div class="social">
+                                <ul>
+                                    <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h5 class="holder-name"><a href="#">Isabela Moreira</a></h5>
+                            <p class="text">Founder and CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-8">
+                    <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="team-image">
+                            <img src="~/images/team-2.png" alt="Team">
+                            <div class="social">
+                                <ul>
+                                    <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h5 class="holder-name"><a href="#">Elon Musk</a></h5>
+                            <p class="text">Sr. Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-8">
+                    <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                        <div class="team-image">
+                            <img src="~/images/team-3.png" alt="Team">
+                            <div class="social">
+                                <ul>
+                                    <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
+                                    <li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h5 class="holder-name"><a href="#">Fiona Smith</a></h5>
+                            <p class="text">Business Development Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
-	<section id="blog" class="blog-area pt-120">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="section-title pb-35">
-						<div class="line"></div>
-						<h3 class="title"><span>Groups </span> Upcoming Events</h3>
-					</div>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-lg-4 col-md-7">
-					<div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-						<div class="blog-image">
-							<img src="~/images/blog-1.jpg" alt="blog">
-						</div>
-						<div class="blog-content">
-							<ul class="meta">
-								<li>Posted By: <a href="#">Admin</a></li>
-								<li>03 June, 2023</li>
-							</ul>
-							<p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
-							<a class="more" href="#">Learn More <i class="lni lni-chevron-right"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-7">
-					<div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-						<div class="blog-image">
-							<img src="~/images/blog-2.jpg" alt="blog">
-						</div>
-						<div class="blog-content">
-							<ul class="meta">
-								<li>Posted By: <a href="#">Admin</a></li>
-								<li>03 June, 2023</li>
-							</ul>
-							<p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
-							<a class="more" href="#">Learn More <i class="lni lni-chevron-right"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-7">
-					<div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-						<div class="blog-image">
-							<img src="~/images/blog-3.jpg" alt="blog">
-						</div>
-						<div class="blog-content">
-							<ul class="meta">
-								<li>Posted By: <a href="#">Admin</a></li>
-								<li>03 June, 2023</li>
-							</ul>
-							<p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
-							<a class="more" href="#">Learn More <i class="lni lni-chevron-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section id="blog" class="blog-area pt-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-35">
+                        <div class="line"></div>
+                        <h3 class="title">Upcoming Events</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-7">
+                    <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <div class="blog-image">
+                            <img src="~/images/blog-1.jpg" alt="blog">
+                        </div>
+                        <div class="blog-content">
+                            <ul class="meta">
+                                <li>Posted By: <a href="#">Admin</a></li>
+                                <li>03 June, 2023</li>
+                            </ul>
+                            <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
+                            <a class="more" href="#">Learn More <i class="lni lni-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="blog-image">
+                            <img src="~/images/blog-2.jpg" alt="blog">
+                        </div>
+                        <div class="blog-content">
+                            <ul class="meta">
+                                <li>Posted By: <a href="#">Admin</a></li>
+                                <li>03 June, 2023</li>
+                            </ul>
+                            <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
+                            <a class="more" href="#">Learn More <i class="lni lni-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                        <div class="blog-image">
+                            <img src="~/images/blog-3.jpg" alt="blog">
+                        </div>
+                        <div class="blog-content">
+                            <ul class="meta">
+                                <li>Posted By: <a href="#">Admin</a></li>
+                                <li>03 June, 2023</li>
+                            </ul>
+                            <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
+                            <a class="more" href="#">Learn More <i class="lni lni-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 <!-- /.row -->
 
 
 @section scripts
 {
-	<script type="text/x-template" id="interest-group-item-template">
-		<div class="col-lg-4 col-sm-6 portfolio-item">
-			<div class="card h-100">
-				<a :href="detailUrl"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-				<div class="card-body">
-					<h4 class="card-title">
-						<a :href="detailUrl">{{group.Name}}</a>
-					</h4>
-					<p class="card-text">{{group.Description}}</p>
-				</div>
-			</div>
-		</div>
-	</script>
-	<script type="text/javascript">
-		$(document).ready(function () {
+    <script type="text/x-template" id="interest-group-item-template">
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+                <a :href="detailUrl"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a :href="detailUrl">{{group.Name}}</a>
+                    </h4>
+                    <p class="card-text">{{group.Description}}</p>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
 
 
 
-			const Accordion = {
-				settings: {
-					// Expand the first item by default
-					first_expanded: false,
-					// Allow items to be toggled independently
-					toggle: false
-				},
+            const Accordion = {
+                settings: {
+                    // Expand the first item by default
+                    first_expanded: false,
+                    // Allow items to be toggled independently
+                    toggle: false
+                },
 
-				openAccordion: function (toggle, content) {
-					if (content.children.length) {
-						toggle.classList.add("is-open");
-						let final_height = Math.floor(content.children[0].offsetHeight);
-						content.style.height = final_height + "px";
-					}
-				},
+                openAccordion: function (toggle, content) {
+                    if (content.children.length) {
+                        toggle.classList.add("is-open");
+                        let final_height = Math.floor(content.children[0].offsetHeight);
+                        content.style.height = final_height + "px";
+                    }
+                },
 
-				closeAccordion: function (toggle, content) {
-					toggle.classList.remove("is-open");
-					content.style.height = 0;
-				},
+                closeAccordion: function (toggle, content) {
+                    toggle.classList.remove("is-open");
+                    content.style.height = 0;
+                },
 
-				init: function (el) {
-					const _this = this;
+                init: function (el) {
+                    const _this = this;
 
-					// Override default settings with classes
-					let is_first_expanded = _this.settings.first_expanded;
-					if (el.classList.contains("is-first-expanded")) is_first_expanded = true;
-					let is_toggle = _this.settings.toggle;
-					if (el.classList.contains("is-toggle")) is_toggle = true;
+                    // Override default settings with classes
+                    let is_first_expanded = _this.settings.first_expanded;
+                    if (el.classList.contains("is-first-expanded")) is_first_expanded = true;
+                    let is_toggle = _this.settings.toggle;
+                    if (el.classList.contains("is-toggle")) is_toggle = true;
 
-					// Loop through the accordion's sections and set up the click behavior
-					const sections = el.getElementsByClassName("accordion");
-					const all_toggles = el.getElementsByClassName("accordion-head");
-					const all_contents = el.getElementsByClassName("accordion-body");
-					for (let i = 0; i < sections.length; i++) {
-						const section = sections[i];
-						const toggle = all_toggles[i];
-						const content = all_contents[i];
+                    // Loop through the accordion's sections and set up the click behavior
+                    const sections = el.getElementsByClassName("accordion");
+                    const all_toggles = el.getElementsByClassName("accordion-head");
+                    const all_contents = el.getElementsByClassName("accordion-body");
+                    for (let i = 0; i < sections.length; i++) {
+                        const section = sections[i];
+                        const toggle = all_toggles[i];
+                        const content = all_contents[i];
 
-						// Click behavior
-						toggle.addEventListener("click", function (e) {
-							if (!is_toggle) {
-								// Hide all content areas first
-								for (let a = 0; a < all_contents.length; a++) {
-									_this.closeAccordion(all_toggles[a], all_contents[a]);
-								}
+                        // Click behavior
+                        toggle.addEventListener("click", function (e) {
+                            if (!is_toggle) {
+                                // Hide all content areas first
+                                for (let a = 0; a < all_contents.length; a++) {
+                                    _this.closeAccordion(all_toggles[a], all_contents[a]);
+                                }
 
-								// Expand the clicked item
-								_this.openAccordion(toggle, content);
-							} else {
-								// Toggle the clicked item
-								if (toggle.classList.contains("is-open")) {
-									_this.closeAccordion(toggle, content);
-								} else {
-									_this.openAccordion(toggle, content);
-								}
-							}
-						});
+                                // Expand the clicked item
+                                _this.openAccordion(toggle, content);
+                            } else {
+                                // Toggle the clicked item
+                                if (toggle.classList.contains("is-open")) {
+                                    _this.closeAccordion(toggle, content);
+                                } else {
+                                    _this.openAccordion(toggle, content);
+                                }
+                            }
+                        });
 
-						// Expand the first item
-						if (i === 0 && is_first_expanded) {
-							_this.openAccordion(toggle, content);
-						}
-					}
-				}
-			};
+                        // Expand the first item
+                        if (i === 0 && is_first_expanded) {
+                            _this.openAccordion(toggle, content);
+                        }
+                    }
+                }
+            };
 
-			(function () {
-				// Initiate all instances on the page
-				const accordions = document.getElementsByClassName("accordions");
-				for (let i = 0; i < accordions.length; i++) {
-					Accordion.init(accordions[i]);
-				}
-			})();
-
-
-		});
+            (function () {
+                // Initiate all instances on the page
+                const accordions = document.getElementsByClassName("accordions");
+                for (let i = 0; i < accordions.length; i++) {
+                    Accordion.init(accordions[i]);
+                }
+            })();
 
 
-	</script>
-	<script src="~/js/group-detail.js"></script>
+        });
+
+
+    </script>
+    <script src="~/js/app/group-detail.js"></script>
 }

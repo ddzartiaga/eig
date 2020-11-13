@@ -1,5 +1,5 @@
 ﻿@{
-	ViewData["Title"] = "Interest Groups";
+	ViewData["Title"] = "Events";
 }
 
 <div id="page">
@@ -26,24 +26,27 @@
 {
 	<script type="text/x-template" id="group-events-item-template">
 		<div class="col-lg-4 col-md-12">
-			<div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-				<div class="blog-image">
-					<img :src="banner" alt="blog">
-				</div>
-				<div class="blog-content">
-					<h4>{{evt.Name}}</h4>
-					<div class="">Group Name</div>
-					<ul class="meta">
-						<li>Venue: {{evt.Venue}}</li>
-					</ul>
-					<ul class="meta">
-						<li>Duration: {{duration}}</li>
-					</ul>
+            <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                @*<div class="blog-image">
+                    <img :src="banner" alt="eventbanner" class="event-banner" height="150" width="200" align-items="center">
+                </div>*@
+                <div class="event-banner">
+                    <img :src="banner" alt="eventbanner">
+                </div>
+                <div class="blog-content">
+                    <h4>{{evt.Name}}</h4>
+                    <div class="">Group Name</div>
+                    <ul class="meta">
+                        <li>Venue: {{evt.Venue}}</li>
+                    </ul>
+                    <ul class="meta">
+                        <li>Duration: {{duration}}</li>
+                    </ul>
 
-					<p class="text">{{evt.Details}}</p>
-					<a class="btn btn-dannger more" :href="detailsUrl">Learn More <i class="lni lni-chevron-right"></i></a>
-				</div>
-			</div>
+                    <p class="text">{{evt.Details}}</p>
+                    <a class="btn btn-dannger more" :href="detailsUrl">Learn More <i class="lni lni-chevron-right"></i></a>
+                </div>
+            </div>
 		</div>
 	</script>
 	<script src="~/js/app/events-list.js"></script>

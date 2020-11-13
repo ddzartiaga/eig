@@ -21,8 +21,9 @@ namespace Web.Controllers
             return View();
         }
 
-        public IActionResult Details()
+        public IActionResult Details(string id)
         {
+            ViewBag.EventId = id;
             return View();
         }
     }
