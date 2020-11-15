@@ -18,13 +18,13 @@ namespace Web.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View("Groups");
         }
 
         public IActionResult Details(string id)
         {
             ViewBag.GroupId = id;
-            return View();
+            return View("GroupDetails");
         }
     }
 }

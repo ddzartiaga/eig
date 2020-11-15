@@ -21,13 +21,12 @@ new Vue({
         groups: null,
     },
     created() {
-        axios.get('https://localhost:44378/api/Mongoose/LoadCollection/InterestGroups?properties=GroupId,Name,Description,Logo')
+        axios.get('https://localhost:44378/api/Mongoose/LoadCollection/InterestGroups?properties=GroupId,Name,Logo')
             .then(response => {
                     this.groups = response.data.items;
-                    console.log(this.groups);
                 }
             )
-            .catch(error => console.log('<interest-groups>' + error))
+            .catch(error => console.log('home.js', error.message))
 
         //TODO: get featured events from server using axios
     },
