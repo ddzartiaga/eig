@@ -2,6 +2,27 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 
+/* CSS Overrides */
+.navbar-brand .brand-text {
+	color: #33c8c1;
+}
+
+.navbar-nav .nav-item a {
+	color: #2E2E2E;
+}
+
+.header-hero-content .header-sub-title {
+	color: #6A6972;
+}
+
+.header-hero-content .header-title {
+	color: #6A6972;
+}
+
+.header-hero-content .text {
+	color: #6A6972;
+}
+
 
 /*
 ---------------------------------------------
@@ -13,40 +34,40 @@ accordions
 	padding: 120px 0px;
 }
 
-	#frequently-question .section-heading p {
-		margin-bottom: 80px;
-	}
+#frequently-question .section-heading p {
+	margin-bottom: 80px;
+}
 
-	#frequently-question .left-text {
-		align-self: center !important;
-	}
+#frequently-question .left-text {
+	align-self: center !important;
+}
 
-		#frequently-question .left-text h5 {
-			font-size: 26px;
-			font-weight: 700;
-			color: #1e1e1e;
-			line-height: 40px;
-			margin-bottom: 25px;
-			letter-spacing: 0.5px;
-		}
+#frequently-question .left-text h5 {
+	font-size: 26px;
+	font-weight: 700;
+	color: #1e1e1e;
+	line-height: 40px;
+	margin-bottom: 25px;
+	letter-spacing: 0.5px;
+}
 
-		#frequently-question .left-text p {
-			margin-bottom: 30px;
-			font-size: 16px;
-			line-height: 30px;
-			letter-spacing: 0.5px;
-		}
+#frequently-question .left-text p {
+	margin-bottom: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	letter-spacing: 0.5px;
+}
 
-		#frequently-question .left-text span {
-			font-size: 16px;
-			color: #4a4a4a;
-			margin-bottom: 50px;
-			display: block;
-		}
+#frequently-question .left-text span {
+	font-size: 16px;
+	color: #4a4a4a;
+	margin-bottom: 50px;
+	display: block;
+}
 
-			#frequently-question .left-text span a {
-				font-weight: 500;
-			}
+#frequently-question .left-text span a {
+	font-weight: 500;
+}
 
 @media (max-width: 765px) {
 	#frequently-question .left-text {
@@ -94,9 +115,9 @@ accordions
 	border-bottom: 1px solid #fff;
 }
 
-	.accordion-body > .content {
-		padding: 20px;
-		padding-top: 0;
-	}
+.accordion-body > .content {
+	padding: 20px;
+	padding-top: 0;
+}
 
 
