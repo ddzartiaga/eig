@@ -6,42 +6,50 @@
 	<input type="hidden" id="gId" value="@ViewBag.GroupId" />
 </div>
 <div id="page">
-	<section class="group-vector">
-		<img src="~/images/Group_of_smiling_office_workers_or_business_people.jpg" />
-	</section>
-	<section class="section" id="frequently-question">
+	<section class="about-area pt-50">
 		<div class="container">
-			<!-- ***** Section Title Start ***** -->
+			<div class="row justify-content-center align-content-center">
+				<div class="col-md-4 col-sm-12">
+					<div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
+						<div class="section-title">
+							<div class="line"></div>
+							<h3 class="title"><span>About </span> {{details.Name}}</h3>
+						</div> <!-- section title -->
+						<p class="text">
+							{{details.Description}}
+						</p>
+						<br />
+						<h5>Mission</h5>
+						<div class="accordion-text">
+							<p>{{details.MIssion}}</p>
+						</div>
+						<br />
+						<h5>Goal and Purpose</h5>
+						<div class="accordion-text">
+							<p>{{details.GoalAndPurpose}}</p>
+						</div>
+					</div> <!-- about content -->
+				</div>
+				<div class="col-md-8 col-sm-12">
+					<div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
+						<img id="group-photo-banner" src="~/images/Group_of_smiling_office_workers_or_business_people.jpg" />
+					</div> <!-- about image -->
+				</div>
+			</div> <!-- row -->
+		</div> <!-- container -->
+	</section>
+	<section id="frequently-question">
+		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-lg-6 col-sm-12">
-					<div class="text-center">
-						<div class="line"></div>
-						<div class="blog-image">
-							<img :src="logo" alt="" height="150" width="200" align-items="center">
-						</div>
-						<h3 class="title"><span> {{details.Name}} </span></h3>
-						<div class="section-heading text-center">
-							<p> {{details.Description}} </p>
-						</div>
+				<div class="col-sm-12">
+					<div class="section-title text-center pb-30">
+						<div class="line m-auto"></div>
+						<h3 class="title"><span>Frequently Asked Questions</span></h3>
 					</div>
 				</div>
 			</div>
-			<!-- ***** Section Title End ***** -->
-
 			<div class="row">
-				<div class="left-text col-lg-6 col-md-6 col-sm-12">
-					<h5>Mission</h5>
-					<div class="accordion-text">
-						<p>{{details.MIssion}}</p>
-					</div>
-					<br />
-					<h5>Goal and Purpose</h5>
-					<div class="accordion-text">
-						<p>{{details.GoalAndPurpose}}</p>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12">
-
+				<div class="col-sm-12">
 					<div class="accordions is-first-expanded">
 						<interest-group-faq-item v-for="f in faqs" :faq="f"></interest-group-faq-item>
 					</div>
@@ -49,6 +57,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section id="team" class="team-area pt-50">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -59,7 +68,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row justify-content-center">
 				<group-officers-item v-for="ofcr in officers" :officer="ofcr"></group-officers-item>
 			</div>
 		</div>
@@ -67,16 +76,46 @@
 
 	<section id="blog" class="blog-area pt-120">
 		<div class="container">
-			<div class="row">
+			<div class="row justify-content-center">
 				<div class="col-lg-6">
-					<div class="section-title pb-35">
-						<div class="line"></div>
+					<div class="section-title  text-center pb-35">
+						<div class="line m-auto"></div>
 						<h3 class="title">Upcoming Events</h3>
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row justify-content-center">
 				<group-events-item v-for="evnt in events" :evt="evnt"></group-events-item>
+			</div>
+		</div>
+	</section>
+	<section id="blog" class="blog-area pt-120">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-6">
+					<div class="section-title  text-center pb-35">
+						<div class="line m-auto"></div>
+						<h3 class="title">Past Events</h3>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<group-events-item v-for="evnt in events" :evt="evnt"></group-events-item>
+			</div>
+		</div>
+	</section>
+	<section id="blog" class="blog-area pt-120">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-6">
+					<div class="section-title  text-center pb-35">
+						<div class="line m-auto"></div>
+						<h3 class="title">Galleries (Soon!)</h3>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				
 			</div>
 		</div>
 	</section>
@@ -107,41 +146,35 @@
 		</article>
 	</script>
 	<script type="text/x-template" id="interest-group-officers-template">
-		<div class="col-lg-4 col-md-7 col-sm-8">
-			<div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+		<div class="col-lg-3 col-md-4 col-sm-6">
+			<div class="single-team text-center mt-30 wow fadeIn p-3" data-wow-duration="1s" data-wow-delay="0.2s">
 				<div class="team-image">
-					<img src="/images/team-1.png" alt="Team">
+					<img src="/images/profile-picture.jpg" alt="Profile Picture">
 				</div>
 				<div class="team-content">
 					<h5 class="holder-name">{{name}}</h5>
 					<div class="section-heading text-center">
 						<p class="text">{{role}}</p>
-						<p class="text">{{email}}</p>
+						<p class="text font-italic">{{email ?? "No Email Provided"}}</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</script>
 	<script type="text/x-template" id="group-events-item-template">
-		<div class="col-lg-4 col-md-12">
+		<div class="col-md-4 col-sm-6">
 			<div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-				@*<div class="blog-image">
-						<img :src="banner" alt="eventbanner" class="event-banner" height="150" width="200" align-items="center">
-					</div>*@
 				<div class="event-banner">
 					<img :src="banner" alt="eventbanner">
 				</div>
 				<div class="blog-content">
-					<h4>{{name}}</h4>
-					<div class="">Group Name</div>
-					<ul class="meta">
-						<li>Venue: {{venue}}</li>
-					</ul>
-					<ul class="meta">
-						<li>Duration: {{duration}}</li>
-					</ul>
-
-					<p class="text">{{details}}</p>
+					<div style="height: 60px;">
+						<h4>{{name}}</h4>
+					</div>
+					<div class="content">
+						<p>Venue: {{venue}}</p>
+						<p>Date(s): {{duration}}</p>
+					</div>
 					<a class="btn btn-dannger more" :href="detailsUrl">Learn More <i class="lni lni-chevron-right"></i></a>
 				</div>
 			</div>

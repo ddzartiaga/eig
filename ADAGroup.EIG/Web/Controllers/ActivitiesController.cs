@@ -18,13 +18,13 @@ namespace Web.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View("Activities");
         }
 
         public IActionResult Details(string id)
         {
             ViewBag.EventId = id;
-            return View();
+            return View("ActivityDetails");
         }
     }
 }

@@ -17,21 +17,63 @@ for details on configuring this project to bundle and minify static web assets. 
 
 .header-hero-content .header-title {
 	color: #6A6972;
+	font-size: 60px;
 }
 
 .header-hero-content .text {
 	color: #6A6972;
 }
 
+#home-groups {
+	padding-bottom: 100px;
+	margin-top: 50px;
+	background: linear-gradient(to right, #33c8c1 0%, #119bd2 50%, #33c8c1 100%);
+}
 
+.header-hero-content .secondary-btn {
+	margin-top: 40px;
+}
+
+.secondary-btn {
+	display: inline-block;
+	font-weight: 500;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	padding: 0 25px;
+	font-size: 16px;
+	line-height: 48px;
+	border-radius: 8px;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	z-index: 5;
+	-webkit-transition: all 0.4s ease-out 0s;
+	-moz-transition: all 0.4s ease-out 0s;
+	-ms-transition: all 0.4s ease-out 0s;
+	-o-transition: all 0.4s ease-out 0s;
+	transition: all 0.4s ease-out 0s;
+	background: -webkit-linear-gradient(left, #fe8464 0%, #fe6e9a 50%, #fe8464 100%);
+	background: -o-linear-gradient(left, #fe8464 0%, #fe6e9a 50%, #fe8464 100%);
+	background: linear-gradient(to right, #fe8464 0%, #fe6e9a 50%, #fe8464 100%);
+	background-size: 200%;
+}
+
+.secondary-btn:hover {
+	color: #fff;
+	background-position: right center;
+}
 /*
 ---------------------------------------------
 accordions
 ---------------------------------------------
 */
-
 #frequently-question {
-	padding: 120px 0px;
+	margin-top: 60px;
 }
 
 #frequently-question .section-heading p {
@@ -120,4 +162,25 @@ accordions
 	padding-top: 0;
 }
 
+
+.event-banner img {
+	height: 220px;
+	object-fit: cover;
+}
+
+/*
+.event-preview img {
+	height: 100%;
+	max-height: 300px;
+	width: 100%;
+	max-width: 900px;
+	align-items: center;
+	border-radius: 30px;
+}
+
+.blog-content .content {
+	height: 60px;
+	padding-left: .5rem;
+}
+*/
 
