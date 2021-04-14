@@ -24,9 +24,8 @@ new Vue({
     created() {
         axios.get('https://localhost:44378/api/Mongoose/LoadCollection/InterestGroups?properties=GroupId,Name,Description,Logo')
             .then(response => {
-                this.groups = response.data.items;
-                console.log(this.groups);
-            }
+                    this.groups = response.data.items;
+                }
             )
             .catch(error => console.log('home.js', error.message));
     },

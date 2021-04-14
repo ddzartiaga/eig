@@ -73,13 +73,12 @@ new Vue({
 
         var baseUrl = 'https://localhost:44378/api/Mongoose/LoadCollection/';
         var filterById = '&filter=GroupId = ' + this.groupId;
-        
 
         // group information
         axios.get(baseUrl + 'InterestGroups?readonly=true&properties=Name,Description,MIssion,GoalAndPurpose,Logo' + filterById)
             .then(response => {
-                this.details = response.data.items[0];
-                this.logo = 'data:image/jpg;base64, ' + this.details.Logo;
+                    this.details = response.data.items[0];
+                    this.logo = 'data:image/jpg;base64, ' + this.details.Logo;
                 }
             )
             .catch(error => console.log('group-detail.js - [GroupInfo]' + error));
@@ -186,7 +185,7 @@ new Vue({
 
 
         // group events
-        axios.get(baseUrl + 'ScheduledEvents?readonly=true&properties=ScheduledEventId,Banner,Name,StartDate,EndDate,Venue,Details' + filterById)
+        axios.get(baseUrl + 'ScheduledEvents?readonly=true&properties=ScheduledEventId,Banner,Name,StartDate,EndDate,Venue,Details&filter=&orderBy=StartDate' + filterById)
             .then(response => {
                 this.events = response.data.items;
             }

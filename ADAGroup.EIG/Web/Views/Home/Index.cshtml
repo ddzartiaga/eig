@@ -5,7 +5,7 @@
 	<div id="home" class="header-hero bg_cover">
 		<div class="container">
 			<div class="row justify-content-center" style="height: 100vh;align-content: center;">
-				<div class="col-sm-12 col-lg-5">
+				<div class="col-sm-12 col-md-6 col-lg-5">
 					<div class="header-hero-content text-center">
 						<h3 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Welcome to</h3>
 						<h2 class="header-title wow fadeInUp" style="color: black" data-wow-duration="1.3s" data-wow-delay="0.5s">Employee Interest Groups (EIG)</h2>
@@ -14,7 +14,7 @@
 						<a href="#home-groups" class="page-scroll secondary-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1s">View Interest Groups</a>
 					</div> <!-- header hero content -->
 				</div>
-				<div class="col-sm-12 col-lg-7">
+				<div class="col-sm-12 col-md-6 col-lg-7">
 					<div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
 						<img src="~/images/business-people.png" alt="hero" />
 					</div> <!-- header hero image -->
@@ -126,7 +126,7 @@
 				<div class="col-lg-10">
 					<div class="section-title text-center pb-40">
 						<div class="line m-auto"></div>
-						<h3 class="title"> <span> Here are the </span> Interest Groups <span> at </span> Infor Manila </h3>
+						<h3 class="title" style="color: white;"> <span> Here are the </span> Interest Groups <span> at </span> Infor Manila </h3>
 					</div> <!-- section title -->
 				</div>
 			</div> <!-- row -->
@@ -142,7 +142,7 @@
 				<div class="col-lg-10">
 					<div class="section-title text-center pb-40">
 						<div class="line m-auto"></div>
-						<h3 class="title"> <span> Here are the </span> Upcoming Events</h3>
+						<h3 class="title">Upcoming Events <span>for this Month </span></h3> 
 					</div> <!-- section title -->
 				</div>
 			</div> <!-- row -->
@@ -171,25 +171,16 @@
 
 	<script type="text/x-template" id="home-events-item-template">
 		<div class="col-lg-4 col-md-12">
-			<div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-				@*<div class="blog-image">
-						<img :src="banner" alt="eventbanner" class="event-banner" height="150" width="200" align-items="center">
-					</div>*@
+			<div class="single-blog mt-30 wow fadeIn shadow p-4" data-wow-duration="1s" data-wow-delay="0.8s">
 				<div class="event-banner">
-					<img :src="banner" alt="eventbanner">
+					<img :src="banner" alt="Event Banner">
 				</div>
 				<div class="blog-content">
-					<h4>{{evt.Name}}</h4>
+					<p class="text" style="font-weight:700">{{evt.Name}}</p>
 					<div class="">Group Name</div>
-					<ul class="meta">
-						<li>Venue: {{evt.Venue}}</li>
-					</ul>
-					<ul class="meta">
-						<li>Duration: {{duration}}</li>
-					</ul>
-
-					<p class="text">{{evt.Details}}</p>
-					<a class="btn btn-dannger more" :href="detailsUrl">Learn More <i class="lni lni-chevron-right"></i></a>
+					<p class="meta"><i class="lni lni-calendar" style="margin-right:10px; color: #33c8c1"></i>{{evt.StartDate}} | End Date</p>
+					<p class="meta"><i class="lni lni-map-marker" style="margin-right: 10px; color: #33c8c1"></i>{{evt.Venue}}</p>
+					<a class="secondary-btn my-2" :href="detailsUrl" style="width: 100%">Learn More <i class="lni lni-chevron-right"></i></a>
 				</div>
 			</div>
 		</div>

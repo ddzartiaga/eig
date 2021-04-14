@@ -21,7 +21,7 @@ new Vue({
         groups: null,
     },
     created() {
-        axios.get('https://localhost:44378/api/Mongoose/LoadCollection/InterestGroups?properties=GroupId,Name,Description,Logo')
+        axios.get('https://localhost:44378/api/Mongoose/LoadCollection/InterestGroups?properties=GroupId,Name,MIssion,GoalAndPurpose')
             .then(response => {
                     this.groups = response.data.items;
                 }

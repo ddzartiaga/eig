@@ -146,9 +146,9 @@ accordions
 	border-bottom: none;
 }
 
-	.accordion-head.is-open .icon {
-		transform: rotate(45deg);
-	}
+.accordion-head.is-open .icon {
+	transform: rotate(45deg);
+}
 
 .accordion-body {
 	overflow: hidden;
@@ -164,8 +164,8 @@ accordions
 
 
 .event-banner img {
-	height: 220px;
 	object-fit: cover;
+	object-position: center;
 }
 
 /*

@@ -21,14 +21,23 @@ new Vue({
     data: {
         events: null,
     },
+    methods: {
+        getDateRange: function () {
+            var today = new Date();
+            var numDays = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+
+            return numDays;
+        }
+    },
     created() {
-        axios.get('https://localhost:44378/api/Mongoose/LoadCollection/ScheduledEvents?properties=ScheduledEventId,Name,StartDate,EndDate,Venue,Details,Banner')
+        var numDays = this.getDateRange();
+        // TODO: filter by date
+        axios.get('https://localhost:44378/api/Mongoose/LoadCollection/ScheduledEvents?properties=ScheduledEventId,Name,Banner,StartDate,EndDate,Venue&filter=&orderBy=StartDate')
             .then(response => {
-                    this.events = response.data.items;
+                this.events = response.data.items;
+                console.log(response.data.items);
                 }
             )
             .catch(error => console.log('<activities-list>' + error))
-
-        //TODO: get featured events from server using axios
     },
 });

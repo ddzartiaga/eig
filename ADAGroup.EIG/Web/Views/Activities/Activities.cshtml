@@ -32,19 +32,13 @@
                 <div class="event-banner">
                     <img :src="banner" alt="eventbanner">
                 </div>
-                <div class="blog-content">
-                    <h4>{{evt.Name}}</h4>
-                    <div class="">Group Name</div>
-                    <ul class="meta">
-                        <li>Venue: {{evt.Venue}}</li>
-                    </ul>
-                    <ul class="meta">
-                        <li>Duration: {{duration}}</li>
-                    </ul>
-
-                    <p class="text">{{evt.Details}}</p>
-                    <a class="btn btn-dannger more" :href="detailsUrl">Learn More <i class="lni lni-chevron-right"></i></a>
-                </div>
+				<div class="blog-content">
+					<p class="text" style="font-weight:700">{{evt.Name}}</p>
+					<div class="">Group Name</div>
+					<p class="meta"><i class="lni lni-calendar" style="margin-right:10px; color: #33c8c1"></i>{{evt.StartDate}} | End Date</p>
+					<p class="meta"><i class="lni lni-map-marker" style="margin-right: 10px; color: #33c8c1"></i>{{evt.Venue}}</p>
+					<a class="secondary-btn my-2" :href="detailsUrl" style="width: 100%">Learn More <i class="lni lni-chevron-right"></i></a>
+				</div>
             </div>
 		</div>
 	</script>
