@@ -20,7 +20,7 @@
     created() {
         this.eventId = document.getElementById('eId').value;
 
-        axios.get('https://localhost:44378/api/Mongoose/LoadCollection/ScheduledEvents?readonly=true&properties=Name,Details,Banner,Venue,StartDate,EndDate,EventStatus,JoinLink&filter=ScheduledEventId = ' + this.eventId)
+        axios.get('http://phmavwifc.infor.com:5000/api/Mongoose/LoadCollection/ScheduledEvents?readonly=true&properties=Name,Details,Banner,Venue,StartDate,EndDate,EventStatus,JoinLink&filter=ScheduledEventId = ' + this.eventId)
             .then(response => {
                 this.eventBanner = 'data:image/png;base64, ' + response.data.items[0].Banner;
 

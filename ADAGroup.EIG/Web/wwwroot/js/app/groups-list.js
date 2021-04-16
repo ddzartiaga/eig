@@ -6,6 +6,7 @@ let InterestGroupItemComponent = {
         return {
             detailUrl: '/Groups/Details/' + this.group.GroupId,
             logo: 'data:image/png;base64, ' + this.group.Logo,
+            banner: 'data:image/png;base64, ' + this.group.Banner,
             name: this.group.Name
         }
     }
@@ -21,7 +22,7 @@ new Vue({
         groups: null,
     },
     created() {
-        axios.get('https://localhost:44378/api/Mongoose/LoadCollection/InterestGroups?properties=GroupId,Name,MIssion,GoalAndPurpose,JoinLink')
+        axios.get('http://phmavwifc.infor.com:5000/api/Mongoose/LoadCollection/InterestGroups?properties=GroupId,Name,Banner,MIssion,GoalAndPurpose,JoinLink')
             .then(response => {
                     this.groups = response.data.items;
                 }

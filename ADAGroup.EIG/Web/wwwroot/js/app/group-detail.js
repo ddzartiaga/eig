@@ -83,7 +83,7 @@ new Vue({
     created() {
         this.groupId = document.getElementById('gId').value;
 
-        var baseUrl = 'https://localhost:44378/api/Mongoose/LoadCollection/';
+        var baseUrl = 'http://phmavwifc.infor.com:5000/api/Mongoose/LoadCollection/';
         var filterById = '&filter=GroupId = ' + this.groupId;
 
         // group information

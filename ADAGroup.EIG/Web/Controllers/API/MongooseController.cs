@@ -27,6 +27,12 @@ namespace Web.Controllers.API
             _httpService = httpService;
         }
 
+        [HttpGet]
+        [Route("Test")]
+        public IActionResult Test()
+        {
+            return Ok("It works!");
+        }
 
         [HttpGet]
         [Route("LoadCollection/{ido}")]

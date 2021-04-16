@@ -56,7 +56,7 @@ new Vue({
         }
     },
     created() {
-        var baseUrl = 'https://localhost:44378/api/Mongoose/LoadCollection/';
+        var baseUrl = 'http://phmavwifc.infor.com:5000/api/Mongoose/LoadCollection/';
         axios.get(baseUrl + 'InterestGroups?properties=GroupId,Name,Description,Logo')
         .then(response => {
                     this.groups = response.data.items;

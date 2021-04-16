@@ -35,7 +35,7 @@ new Vue({
         },
     },
     created() {
-        var baseUrl = 'https://localhost:44378/api/Mongoose/LoadCollection/';
+        var baseUrl = 'http://phmavwifc.infor.com:5000/api/Mongoose/LoadCollection/';
         axios.get(baseUrl + 'InterestGroups?properties=GroupId,Name')
             .then(response => {
                     var grps = response.data.items;
@@ -46,7 +46,7 @@ new Vue({
                     }
 
                     // load events after the groups
-                axios.get(baseUrl + 'ScheduledEvents?properties=ScheduledEventId,GroupId,Name,StartDate,EndDate,Venue,Details,Banner&orderBy=StartDate')
+                axios.get(baseUrl + 'ScheduledEvents?properties=ScheduledEventId,GroupId,Name,StartDate,EndDate,Venue,Details,Banner&filter=&orderBy=StartDate')
                     .then(response => {
                             var rawEvents = response.data.items;
                             
