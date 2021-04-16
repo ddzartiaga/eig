@@ -56,7 +56,8 @@ new Vue({
         }
     },
     created() {
-        axios.get('https://localhost:44378/api/Mongoose/LoadCollection/InterestGroups?properties=GroupId,Name,Description,Logo')
+        var baseUrl = 'https://localhost:44378/api/Mongoose/LoadCollection/';
+        axios.get(baseUrl + 'InterestGroups?properties=GroupId,Name,Description,Logo')
         .then(response => {
                     this.groups = response.data.items;
 
@@ -66,7 +67,7 @@ new Vue({
                     }
 
                     // load events after the groups
-            axios.get('https://localhost:44378/api/Mongoose/LoadCollection/ScheduledEvents?properties=ScheduledEventId,GroupId,Name,Banner,StartDate,EndDate,Venue&filter=&orderBy=StartDate')
+            axios.get(baseUrl + 'ScheduledEvents?properties=ScheduledEventId,GroupId,Name,Banner,StartDate,EndDate,Venue&filter=&orderBy=StartDate')
                         .then(response => {
                             var rawEvents = response.data.items;
                             

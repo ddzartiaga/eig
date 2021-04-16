@@ -226,3 +226,6 @@ accordions
 	object-position: center;
 }
 
+.back-to-top {
+	background: linear-gradient(to right, #33c8c1 0%, #33c8c1 100%);
+}

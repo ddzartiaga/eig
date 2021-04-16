@@ -87,7 +87,7 @@ new Vue({
         var filterById = '&filter=GroupId = ' + this.groupId;
 
         // group information
-        axios.get(baseUrl + 'InterestGroups?readonly=true&properties=Logo,Banner,Name,Description,MIssion,GoalAndPurpose,JoinLink' + filterById)
+        axios.get(baseUrl + 'InterestGroups?readonly=true&properties=Logo,Banner,Name,Description,MIssion,GoalAndPurpose,JoinLink,Details' + filterById)
             .then(response => {
                     this.details = response.data.items[0];
                     this.logo = 'data:image/jpg;base64, ' + this.details.Logo;
