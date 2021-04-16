@@ -7,14 +7,13 @@
 </div>
 
 <div id="page">
-	<section class="about-area pt-50">
+	<section class="about-area pt-50 event-detail">
 		<div class="container">
 			<div class="row justify-content-center align-content-center">
 				<div class="col-md-12 col-sm-12">
 					<div class="about-image text-center mt-50">
 						<div>
-							<img id="event-img-banner" class="img-fluid" src="/images/hike.jpg" alt="Event Image Banner">
-							@*<img class="event-preview" :src="eventBanner" alt="">*@
+							<img class="img-fluid event-banner-photo" :src="eventBanner" alt="Event Image Banner">
 						</div>
 
 					</div> <!-- about image -->
@@ -23,11 +22,12 @@
 			<div class="row justify-content-center mt-4">
 				<div class="col-md-8 col-sm-12">
 					<h3>{{eventInfo.Name}}</h3>
-					<div><i class="lni lni-calendar m-2" style="font-size: 25px; color: #33c8c1"></i>{{eventInfo.StartDate}}</div>
-					<div><i class="lni lni-map-marker m-2" style="font-size: 25px; color: #33c8c1"></i>{{eventInfo.Venue}}</div>
+					<p class="meta"><i class="lni lni-calendar mr-2" style="color: #33c8c1"></i><span style="width: 60px">Starts:</span>{{eventInfo.StartDate}}</p>
+					<p class="meta"><i class="lni lni-calendar mr-2" style="color: #33c8c1"></i><span style="width: 60px">Ends:</span>{{eventInfo.EndDate ?? "N/A"}}</p>
+					<p class="meta"><i class="lni lni-map-marker mr-2" style="color: #33c8c1"></i>{{eventInfo.Venue}}</p>
 				</div>
 				<div class="col-md-4 col-sm-12 align-content-center">
-					<a style="width: 100%" href="/Groups" class="main-btn">Register to this Event</a>
+					<a style="width: 100%" :href="eventInfo.JoinLink" class="main-btn">Register to this Event</a>
 				</div>
 			</div> <!-- row -->
 			<hr>
@@ -35,7 +35,6 @@
 				<div class="col-md-12 col-sm-12">
 					<h5>Details</h5>
 					<p class="text"> {{eventInfo.Details}} </p>
-					<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
 				</div>
 			</div> <!-- row -->
 		</div> <!-- container -->

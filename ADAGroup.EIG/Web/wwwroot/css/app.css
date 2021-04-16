@@ -163,24 +163,66 @@ accordions
 }
 
 
-.event-banner img {
+.group-card .group-logo {
+	height: 120px;
+	object-fit: scale-down;
+	object-position: center;
+}
+
+.group-card .group-description {
+	height: 110px;
+	overflow-y: auto;
+}
+
+.event-card .event-card-banner {
+	height: 200px;
+	width: 100%;
 	object-fit: cover;
 	object-position: center;
 }
 
-/*
-.event-preview img {
-	height: 100%;
-	max-height: 300px;
-	width: 100%;
-	max-width: 900px;
-	align-items: center;
-	border-radius: 30px;
+.event-card .event-name {
+	font-weight: 700;
 }
 
-.blog-content .content {
-	height: 60px;
-	padding-left: .5rem;
+.groups-list .group-photo-banner {
+	height: 500px;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
 }
-*/
+
+.groups-list .group-photo-banner {
+	height: 500px;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.group-detail .group-banner-photo {
+	height: 500px;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.group-detail .group-detail-logo {
+	height: 250px;
+	object-fit: scale-down;
+	object-position: center;
+}
+
+.officer-card .profile-pic {
+	height: 250px;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.event-detail .event-banner-photo {
+	height: 500px;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
 

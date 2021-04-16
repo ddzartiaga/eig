@@ -131,7 +131,7 @@
 				</div>
 			</div> <!-- row -->
 			<div class="row justify-content-center">
-				<interest-group-item v-for="grp in groups" :group="grp"></interest-group-item>
+				<home-groups-item v-for="grp in groups" :group="grp"></home-groups-item>
 			</div> <!-- row -->
 			<div id="particles-1" class="particles"></div>
 		</div> <!-- container -->
@@ -156,13 +156,14 @@
 
 @section scripts
 {
-	<script type="text/x-template" id="interest-group-logo-template">
-		<div class="col-lg-4 col-md-4 col-sm-6">
+	<script type="text/x-template" id="home-groups-item-template">
+		<div class="col-lg-4 col-md-4 col-sm-6 group-card">
 			<a :href="detailUrl">
 				<div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
 					<div class="services-icon">
-						<img class="shape" :src="logo" alt="shape">
-						<p>{{group.Description}}</p>
+						<img class="group-logo" :src="logo" alt="Group Logo">
+						<p class="mt-4 mb-3 font-weight-bolder" style="font-size: 1.5rem;">{{group.Name}}</p>
+						<p class="group-description">{{group.Description}}</p>
 					</div>
 				</div> <!-- single services -->
 			</a>
@@ -170,21 +171,19 @@
 	</script>
 
 	<script type="text/x-template" id="home-events-item-template">
-		<div class="col-lg-4 col-md-12">
+		<div class="col-lg-4 col-md-12 event-card">
 			<div class="single-blog mt-30 wow fadeIn shadow p-4" data-wow-duration="1s" data-wow-delay="0.8s">
-				<div class="event-banner">
-					<img :src="banner" alt="Event Banner">
-				</div>
+				<img class="event-card-banner" :src="banner" alt="Event Banner">
 				<div class="blog-content">
-					<p class="text" style="font-weight:700">{{evt.Name}}</p>
-					<div class="">Group Name</div>
-					<p class="meta"><i class="lni lni-calendar" style="margin-right:10px; color: #33c8c1"></i>{{evt.StartDate}} | End Date</p>
-					<p class="meta"><i class="lni lni-map-marker" style="margin-right: 10px; color: #33c8c1"></i>{{evt.Venue}}</p>
+					<p class="event-name" style="font-size: 1.5rem;">{{evt.Name}}</p>
+					<div class="event-group-name font-weight-bolder">{{evt.GroupName}}</div>
+					<p class="meta"><i class="lni lni-calendar mr-2" style="color: #33c8c1"></i><span style="width: 60px">Starts:</span>{{evt.StartDate}}</p>
+					<p class="meta"><i class="lni lni-calendar mr-2" style="color: #33c8c1"></i><span style="width: 60px">Ends:</span>{{evt.EndDate ?? "N/A"}}</p>
+					<p class="meta"><i class="lni lni-map-marker mr-2" style="color: #33c8c1"></i>{{evt.Venue}}</p>
 					<a class="secondary-btn my-2" :href="detailsUrl" style="width: 100%">Learn More <i class="lni lni-chevron-right"></i></a>
 				</div>
 			</div>
 		</div>
 	</script>
 	<script src="~/js/app/home.js"></script>
-	<script src="~/js/app/home-events.js"></script>
 }

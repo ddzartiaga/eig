@@ -22,11 +22,11 @@
 @section scripts
 {
 	<script type="text/x-template" id="interest-group-item-template">
-		<div class="single-services shadow mt-30 p-2 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+		<div class="single-services shadow mt-30 p-2 wow fadeIn groups-list" data-wow-duration="1s" data-wow-delay="0.2s">
 			<div class="row">
 				<div class="col-lg-8 col-md-12 col-sm-12">
 					<div class="services-icon">
-						<img class="img-fluid" id="group-photo-banner" src="/images/Group_of_smiling_office_workers_or_business_people.jpg" />
+						<img class="group-photo-banner" src="/images/Group_of_smiling_office_workers_or_business_people.jpg" />
 					</div>
 				</div> <!-- single services -->
 
@@ -34,14 +34,17 @@
 					<div class="services-content text-left">
 						<h4 class="services-title mt-md-2 mt-sm-2"><a href="#">{{group.Name}}</a></h4>
 						<br />
-						<div ><span class="text-uppercase font-weight-bold">Mission</span></div>
-						<div>{{group.MIssion}}</div>
-						<br />
-						<div class="text-uppercase font-weight-bold">Goal and Purpose</div>
-						<div>{{group.GoalAndPurpose}}</div>
+						<div style="height: 300px; overflow-y: auto;">
+							<div><span class="text-uppercase font-weight-bold">Mission</span></div>
+							<div>{{group.MIssion}}</div>
+							<br />
+							<div class="text-uppercase font-weight-bold">Goal and Purpose</div>
+							<div>{{group.GoalAndPurpose}}</div>
+						</div>
+						
 						<div class="mt-3">
 							<a class="main-btn w-100 my-1" :href="detailUrl">Learn More <i class="lni lni-chevron-right"></i></a>
-							<a class="secondary-btn w-100 my-1" :href="detailUrl">Request to Join</a>
+							<a class="secondary-btn w-100 my-1" :href="group.JoinLink" target="_blank">Request to Join</a>
 						</div>
 					</div>
 				</div>

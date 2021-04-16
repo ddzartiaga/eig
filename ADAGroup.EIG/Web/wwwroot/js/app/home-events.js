@@ -35,7 +35,7 @@ new Vue({
         axios.get('https://localhost:44378/api/Mongoose/LoadCollection/ScheduledEvents?properties=ScheduledEventId,Name,Banner,StartDate,EndDate,Venue&filter=&orderBy=StartDate')
             .then(response => {
                 this.events = response.data.items;
-                console.log(response.data.items);
+                console.log(response.data);
                 }
             )
             .catch(error => console.log('<activities-list>' + error))
