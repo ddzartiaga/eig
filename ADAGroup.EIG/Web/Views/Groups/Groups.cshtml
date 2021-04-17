@@ -13,7 +13,16 @@
 					</div> <!-- section title -->
 				</div>
 			</div> <!-- row -->
-			<interest-group-item v-for="grp in groups" :group="grp"></interest-group-item>
+			<div class="row justify-content-center">
+				<div class="col-lg-12 col-md-12 col-sm-12 text-center mt-4" v-if="groups.length === 0">
+					<h4>No Available Groups, come back soon!</h4>
+					<img style="height: 300px;" src="/images/no-reults.png" alt="No Available Groups" />
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12" v-else>
+					<interest-group-item v-for="grp in groups" :group="grp"></interest-group-item>
+				</div>
+			</div>
+			
 		</div> <!-- container -->
 	</section>
 </div>

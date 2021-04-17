@@ -35,8 +35,8 @@ new Vue({
         },
     },
     created() {
-        var baseUrl = 'http://phmavwifc.infor.com:5000/api/Mongoose/LoadCollection/';
-        axios.get(baseUrl + 'InterestGroups?properties=GroupId,Name')
+        var baseUrl = 'http://phmavwifc.infor.com:5000/api/Mongoose/';
+        axios.get(baseUrl + 'LoadCollection/InterestGroups?properties=GroupId,Name')
             .then(response => {
                     var grps = response.data.items;
 
@@ -45,29 +45,33 @@ new Vue({
                         this.groupKeyValue.push({ id: grps[i].GroupId, name: grps[i].Name });
                     }
 
-                    // load events after the groups
-                axios.get(baseUrl + 'ScheduledEvents?properties=ScheduledEventId,GroupId,Name,StartDate,EndDate,Venue,Details,Banner&filter=&orderBy=StartDate')
+                // load events after the groups. filtering and sorting is done in api level for now (workaround) since MG does not support filter by date yet
+                axios.get(baseUrl + 'LoadUpcomingEvents/ScheduledEvents?properties=ScheduledEventId,GroupId,Name,StartDate,EndDate,Venue,Details,Banner')
                     .then(response => {
                             var rawEvents = response.data.items;
                             
                             for (e = 0; e < rawEvents.length; e++) {
-                                    console.log(rawEvents[e].GroupId);
-                                    var grpName = this.groupKeyValue.find( ({ id }) => id === rawEvents[e].GroupId ).name;   
+                                    var grpName = this.groupKeyValue.find( ({ id }) => id === rawEvents[e].groupId ).name;   
 
-                                    var sDate = this.parseDateTime( rawEvents[e].StartDate );
+                                    var sDate = this.parseDateTime( rawEvents[e].startDate );
                                     var eDate = null;
-                                    if(rawEvents[e].EndDate !== null) {
-                                        eDate = this.parseDateTime( rawEvents[e].EndDate );
+                                    if(rawEvents[e].endDate !== null) {
+                                        eDate = this.parseDateTime( rawEvents[e].endDate );
+                                    }
+
+                                    var eBanner = null;
+                                    if (rawEvents[e].banner !== null) {
+                                        eBanner = 'data:image/jpg;base64, ' + rawEvents[e].banner;
                                     }
                                 
-                                    var evt = { ...rawEvents[e], GroupName: grpName, StartDate: sDate, EndDate: eDate };  // deconstruct and add GroupName property
+                                    var evt = { ...rawEvents[e], banner: eBanner, groupName: grpName, startDate: sDate, endDate: eDate };  // deconstruct and add GroupName property
                                     this.events.push(evt);  // push to events array
                                 }
                             }
                     )
-                    .catch(error => console.log('<activities-list>' + error));
+                    .catch(error => console.log('event-list.js upcoming events' + error));
                 }
             )
-            .catch(error => console.log('home-groups', error.message));
+            .catch(error => console.log('event-list.js group', error.message));
     },
 });

@@ -16,7 +16,7 @@
 				</div>
 				<div class="col-sm-12 col-md-6 col-lg-7">
 					<div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
-						<img src="~/images/business-people.png" alt="hero" />
+						<img src="~/images/biz-people.png" alt="Hero Image" />
 					</div> <!-- header hero image -->
 				</div>
 			</div> <!-- row -->
@@ -147,8 +147,16 @@
 				</div>
 			</div> <!-- row -->
 			<div class="row justify-content-center">
-				<home-events-item v-for="evnt in events" :evt="evnt"></home-events-item>
-			</div> <!-- row -->
+				<div class="col-lg-12 col-md-12 col-sm-12 text-center mt-4" v-if="events.length === 0">
+					<h4>No Upcoming Events for this month, come back soon!</h4>
+					<img style="height: 300px;" src="/images/no-reults.png" alt="No Upcoming Events" />
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12" v-else>
+					<div class="row justify-content-center">
+						<home-events-item v-for="evnt in events" :evt="evnt"></home-events-item>
+					</div>
+				</div>
+			</div>
 		</div> <!-- container -->
 	</section>
 </div>
@@ -175,11 +183,11 @@
 			<div class="single-blog mt-30 wow fadeIn shadow p-4" data-wow-duration="1s" data-wow-delay="0.8s">
 				<img class="event-card-banner" :src="banner" alt="Event Banner">
 				<div class="blog-content">
-					<p class="event-name" style="font-size: 1.5rem;">{{evt.Name}}</p>
-					<div class="event-group-name font-weight-bolder">{{evt.GroupName}}</div>
-					<p class="meta"><i class="lni lni-calendar mr-2" style="color: #33c8c1"></i><span style="width: 60px">Starts:</span>{{evt.StartDate}}</p>
-					<p class="meta"><i class="lni lni-calendar mr-2" style="color: #33c8c1"></i><span style="width: 60px">Ends:</span>{{evt.EndDate ?? "N/A"}}</p>
-					<p class="meta"><i class="lni lni-map-marker mr-2" style="color: #33c8c1"></i>{{evt.Venue}}</p>
+					<p class="event-name" style="font-size: 1.5rem;">{{evt.name}}</p>
+					<div class="event-group-name font-weight-bolder">{{evt.groupName}}</div>
+					<p class="meta"><i class="lni lni-calendar mr-2" style="color: #33c8c1"></i><span style="width: 60px">Starts:</span>{{evt.startDate}}</p>
+					<p class="meta"><i class="lni lni-calendar mr-2" style="color: #33c8c1"></i><span style="width: 60px">Ends:</span>{{evt.endDate ?? "N/A"}}</p>
+					<p class="meta"><i class="lni lni-map-marker mr-2" style="color: #33c8c1"></i>{{evt.venue}}</p>
 					<a class="secondary-btn my-2" :href="detailsUrl" style="width: 100%">Learn More <i class="lni lni-chevron-right"></i></a>
 				</div>
 			</div>

@@ -66,6 +66,7 @@ new Vue({
         faqs: null,
         officers: [],
         events: [],
+        pastevents: [],
         galleries: null,
     },
     methods: {
@@ -83,22 +84,22 @@ new Vue({
     created() {
         this.groupId = document.getElementById('gId').value;
 
-        var baseUrl = 'http://phmavwifc.infor.com:5000/api/Mongoose/LoadCollection/';
+        var baseUrl = 'http://phmavwifc.infor.com:5000/api/Mongoose/';
         var filterById = '&filter=GroupId = ' + this.groupId;
 
         // group information
-        axios.get(baseUrl + 'InterestGroups?readonly=true&properties=Logo,Banner,Name,Description,MIssion,GoalAndPurpose,JoinLink,Details' + filterById)
+        axios.get(baseUrl + 'LoadCollection/InterestGroups?readonly=true&properties=Logo,Banner,Name,Description,MIssion,GoalAndPurpose,JoinLink,Details' + filterById)
             .then(response => {
                     this.details = response.data.items[0];
                     this.logo = 'data:image/jpg;base64, ' + this.details.Logo;
                     this.banner = 'data:image/jpg;base64, ' + this.details.Banner;
                 }
             )
-            .catch(error => console.log('group-detail.js - [GroupInfo]' + error));
+            .catch(error => console.log('group-detail.js - group-info' + error));
 
 
         // officers
-        axios.get(baseUrl + 'EIGOfficers?readonly=true&properties=Name,ProfilePic,Role,Email&filter=GroupID = ' + this.groupId)
+        axios.get(baseUrl + 'LoadCollection/EIGOfficers?readonly=true&properties=Name,ProfilePic,Role,Email&filter=GroupID = ' + this.groupId)
             .then(response => {
                     var rawOffcr = response.data.items;
                             
@@ -115,27 +116,56 @@ new Vue({
                         }
                     }
             )
-            .catch(error => console.log('group-detail.js - [GroupOfficers]' + error));
+            .catch(error => console.log('group-detail.js - officers' + error));
 
 
-        // group events
-        axios.get(baseUrl + 'ScheduledEvents?readonly=true&properties=ScheduledEventId,Banner,Name,StartDate,EndDate,Venue,Details&orderBy=StartDate' + filterById)
+        // group upcoming
+        axios.get(baseUrl + 'LoadUpcomingEvents/ScheduledEvents?readonly=true&properties=ScheduledEventId,Banner,Name,StartDate,EndDate,Venue,Details&orderBy=StartDate' + filterById)
             .then(response => {
                     var rawEvents = response.data.items;
                             
                     for (e = 0; e < rawEvents.length; e++) {
 
-                            var sDate = this.parseDateTime( rawEvents[e].StartDate );
+                            var sDate = this.parseDateTime( rawEvents[e].startDate );
                             var eDate = null;
-                            if(rawEvents[e].EndDate !== null) {
-                                eDate = this.parseDateTime( rawEvents[e].EndDate );
+                            if(rawEvents[e].endDate !== null) {
+                                eDate = this.parseDateTime( rawEvents[e].endDate );
+                            }
+
+                            var eBanner = null;
+                            if(rawEvents[e].banner !== null) {
+                                eBanner = 'data:image/jpg;base64, ' + rawEvents[e].banner;
                             }
                                 
-                            var evt = { ...rawEvents[e], StartDate: sDate, EndDate: eDate };  // deconstruct and add GroupName property
+                            var evt = { ...rawEvents[e], banner:eBanner, startDate: sDate, endDate: eDate };  // deconstruct and add GroupName property
                             this.events.push(evt);  // push to events array
                         }
                     }
             )
-            .catch(error => console.log('group-detail.js - [GroupEvents]' + error));
+            .catch(error => console.log('group-detail.js - upcoming events' + error));
+
+        // group upcoming
+        axios.get(baseUrl + 'LoadPastEvents/ScheduledEvents?readonly=true&properties=ScheduledEventId,Banner,Name,StartDate,EndDate,Venue,Details&orderBy=StartDate' + filterById)
+            .then(response => {
+                    var rawEvents = response.data.items;
+
+                    for (e = 0; e < rawEvents.length; e++) {
+
+                        var sDate = this.parseDateTime(rawEvents[e].startDate);
+                        var eDate = null;
+                        if (rawEvents[e].endDate !== null) {
+                            eDate = this.parseDateTime(rawEvents[e].endDate);
+                        }
+
+                        var eBanner = null;
+                        if (rawEvents[e].banner !== null) {
+                            eBanner = 'data:image/jpg;base64, ' + rawEvents[e].banner;
+                        }
+                        var evt = { ...rawEvents[e], banner: eBanner, startDate: sDate, endDate: eDate };  // deconstruct and add GroupName property
+                        this.pastevents.push(evt);  // push to events array
+                    }
+                }
+            )
+            .catch(error => console.log('group-detail.js - past-events' + error));
     }
 });

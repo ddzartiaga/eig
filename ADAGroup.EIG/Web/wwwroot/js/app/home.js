@@ -17,10 +17,10 @@ let GroupEventsItemComponent = {
     props: ['evt'],
     data() {
         return {
-            detailsUrl: '/Activities/Details/' + this.evt.ScheduledEventId,
-            banner: 'data:image/jpg;base64, ' + this.evt.Banner,
-            venue: this.evt.Venue == null ? 'TBA' : this.evt.Venue,
-            duration: this.evt.StartDate,
+            detailsUrl: '/Activities/Details/' + this.evt.scheduledEventId,
+            banner: 'data:image/jpg;base64, ' + this.evt.banner,
+            venue: this.evt.Venue == null ? 'TBA' : this.evt.venue,
+            duration: this.evt.startDate,
         }
     }
 };
@@ -56,8 +56,8 @@ new Vue({
         }
     },
     created() {
-        var baseUrl = 'http://phmavwifc.infor.com:5000/api/Mongoose/LoadCollection/';
-        axios.get(baseUrl + 'InterestGroups?properties=GroupId,Name,Description,Logo')
+        var baseUrl = 'http://phmavwifc.infor.com:5000/api/Mongoose/';
+        axios.get(baseUrl + 'LoadCollection/InterestGroups?properties=GroupId,Name,Description,Logo')
         .then(response => {
                     this.groups = response.data.items;
 
@@ -67,23 +67,24 @@ new Vue({
                     }
 
                     // load events after the groups
-            axios.get(baseUrl + 'ScheduledEvents?properties=ScheduledEventId,GroupId,Name,Banner,StartDate,EndDate,Venue&filter=&orderBy=StartDate')
+            axios.get(baseUrl + 'LoadMonthEvents/ScheduledEvents?properties=ScheduledEventId,GroupId,Name,Banner,StartDate,EndDate,Venue&filter=&orderBy=StartDate')
                         .then(response => {
                             var rawEvents = response.data.items;
                             
                             for (e = 0; e < rawEvents.length; e++) {
-                                    var grpName = this.groupKeyValue.find( ({ id }) => id === rawEvents[e].GroupId ).name;   
+                                    var grpName = this.groupKeyValue.find( ({ id }) => id === rawEvents[e].groupId ).name;   
 
-                                    var sDate = this.parseDateTime( rawEvents[e].StartDate );
+                                    var sDate = this.parseDateTime( rawEvents[e].startDate );
                                     var eDate = null;
-                                    if(rawEvents[e].EndDate !== null) {
-                                        eDate = this.parseDateTime( rawEvents[e].EndDate );
+                                    if(rawEvents[e].endDate !== null) {
+                                        eDate = this.parseDateTime( rawEvents[e].endDate );
                                     }
                                 
-                                    var evt = { ...rawEvents[e], GroupName: grpName, StartDate: sDate, EndDate: eDate };  // deconstruct and add GroupName property
+                                    var evt = { ...rawEvents[e], groupName: grpName, startDate: sDate, endDate: eDate };  // deconstruct and add GroupName property
                                     this.events.push(evt);  // push to events array
-                                }
                             }
+                            console.log(this.events);
+                        }
                     )
                     .catch(error => console.log('home-events' + error.message));
                 }
